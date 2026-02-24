@@ -1,20 +1,20 @@
 class KlaatSnapshot < Formula
-  desc "Klaat snapshot build - 1.0.0-e4ea4a92"
+  desc "Klaat snapshot build - 1.0.0-d0468089"
   homepage "https://klaat.kartikarora.me"
-  version "1.0.0-e4ea4a92"
+  version "1.0.0-d0468089"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-e4ea4a92/klaat-macos-arm64-1.0.0-e4ea4a92"
-    sha256 "79b0c471055aea90e41200c083cceb2ab474c5c881cb7fb85a5af9fedff27ced"
+    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-d0468089/klaat-macos-arm64-1.0.0-d0468089"
+    sha256 "01d6d0ede8d893525b376e07000a1da19f3c93e3dacc9c46fde3256597090726"
   elsif OS.mac? && Hardware::CPU.intel?
-    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-e4ea4a92/klaat-macos-x64-1.0.0-e4ea4a92"
-    sha256 "b3ad7ced3d296062fb4460e98ec6aa9ea4f8bd0020d4395066b0abfa87f01059"
+    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-d0468089/klaat-macos-x64-1.0.0-d0468089"
+    sha256 "98935bf022d5ec9d53c0815ac8b7772c0462d0017453c5054225e617d9e35421"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-e4ea4a92/klaat-linux-arm64-1.0.0-e4ea4a92"
-    sha256 "4447dbba2053d7a40cf90b3bfc8412358dab2284db68e5a9f7cb3a8cb000264c"
+    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-d0468089/klaat-linux-arm64-1.0.0-d0468089"
+    sha256 "234da9ebedc6c1de843f72099ecac15941076f45588200b328564d1750c25d4a"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-e4ea4a92/klaat-linux-x64-1.0.0-e4ea4a92"
-    sha256 "2de109b13a02f81c56057362e537c6d68753fb629bd9ff3c664f652e4b75f46a"
+    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-d0468089/klaat-linux-x64-1.0.0-d0468089"
+    sha256 "81e746ebfb11c8ae292128469c6b76f87cf0d15a5f1bbd4aa5158fb46d1ae915"
   end
 
   def install
