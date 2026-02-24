@@ -1,20 +1,20 @@
 class KlaatSnapshot < Formula
-  desc "Klaat snapshot build - 1.0.0-d0468089"
+  desc "Klaat snapshot build - 1.0.0-baeed0d7"
   homepage "https://klaat.kartikarora.me"
-  version "1.0.0-d0468089"
+  version "1.0.0-baeed0d7"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-d0468089/klaat-macos-arm64-1.0.0-d0468089"
-    sha256 "01d6d0ede8d893525b376e07000a1da19f3c93e3dacc9c46fde3256597090726"
+    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-baeed0d7/klaat-macos-arm64-1.0.0-baeed0d7"
+    sha256 "c73157271006894a030798d3bbffe087fe159df29c1c2c1d3ef13cf5fc8d2d37"
   elsif OS.mac? && Hardware::CPU.intel?
-    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-d0468089/klaat-macos-x64-1.0.0-d0468089"
-    sha256 "98935bf022d5ec9d53c0815ac8b7772c0462d0017453c5054225e617d9e35421"
+    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-baeed0d7/klaat-macos-x64-1.0.0-baeed0d7"
+    sha256 "1ab554982ce5160159136651b8952e974f44beee1837e53951a46099024ed6a2"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-d0468089/klaat-linux-arm64-1.0.0-d0468089"
-    sha256 "234da9ebedc6c1de843f72099ecac15941076f45588200b328564d1750c25d4a"
+    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-baeed0d7/klaat-linux-arm64-1.0.0-baeed0d7"
+    sha256 "3f62e009e24901eb8d63503591afa2577943cbc3da402b588dc2320c78662045"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-d0468089/klaat-linux-x64-1.0.0-d0468089"
-    sha256 "81e746ebfb11c8ae292128469c6b76f87cf0d15a5f1bbd4aa5158fb46d1ae915"
+    url "https://pub-eb432782c4e6445392194ae2c721a1d8.r2.dev/bin/klaat/snapshot/1.0.0-baeed0d7/klaat-linux-x64-1.0.0-baeed0d7"
+    sha256 "f0bf2f9933cdc9296fecd447e88bf92cf2437d375f02457b5277d2fc2e616ece"
   end
 
   def install
