@@ -1,20 +1,27 @@
 class KlaatSnapshot < Formula
-  desc "Klaat snapshot build - 0.4.0.24-12c70992"
+  desc "Klaat snapshot build - 1.1.0.25-b7055c17"
   homepage "https://klaat.kartikarora.me"
-  version "0.4.0.24-12c70992"
+  version "1.1.0.25-b7055c17"
 
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://distribute.kartikarora.me/bin/klaat/snapshot/0.4.0.24-12c70992/klaat-snapshot-macos-arm64-0.4.0.24-12c70992"
-    sha256 "8c4fa42e13d54de78111ec3221c965896ff96461a3dc91225fb3589835ac762d"
-  elsif OS.linux? && Hardware::CPU.arm?
-    url "https://distribute.kartikarora.me/bin/klaat/snapshot/0.4.0.24-12c70992/klaat-snapshot-linux-arm64-0.4.0.24-12c70992"
-    sha256 "993e7015a31872ef76bd2c6dcfbae6016cf5cc10dba50f6b8e154860953c7796"
-  elsif OS.linux? && Hardware::CPU.intel?
-    url "https://distribute.kartikarora.me/bin/klaat/snapshot/0.4.0.24-12c70992/klaat-snapshot-linux-x64-0.4.0.24-12c70992"
-    sha256 "db8077fae0634239df49355e0690d2986f07b882fd28cdacd3387ed6996c6e0c"
+  # Default URL (macOS ARM64) to satisfy Homebrew's static parsing requirement
+  url "https://distribute.kartikarora.me/bin/klaat/snapshot/1.1.0.25-b7055c17/klaat-snapshot-macos-arm64-1.1.0.25-b7055c17"
+  sha256 "221a8b0d64c20a6b9b471c070dede2ed0b40bc03e200dbcefd85bf7f7485458a"
+
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://distribute.kartikarora.me/bin/klaat/snapshot/1.1.0.25-b7055c17/klaat-snapshot-linux-arm64-1.1.0.25-b7055c17"
+      sha256 "d99d592187aaca518b45ec42d3f14c11c3e46701aeb2f64b93168296d6d0d710"
+    elsif Hardware::CPU.intel?
+      url "https://distribute.kartikarora.me/bin/klaat/snapshot/1.1.0.25-b7055c17/klaat-snapshot-linux-x64-1.1.0.25-b7055c17"
+      sha256 "0a76f75d89adfa3ffbd4f4c1dc9e3418b73ae3f164e295982f23d0055753b7bd"
+    end
   end
 
   def install
+    if OS.mac? && Hardware::CPU.intel?
+      odie "Klaat only supports Apple Silicon Macs. Intel Macs are not supported."
+    end
+
     bin.install Dir["klaat-*"].first => "klaat-snapshot"
   end
 
